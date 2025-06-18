@@ -1,4 +1,5 @@
-This is a newer edit from my local computer.
+# This is the third commit.
+This is a newer edit from GitHub.
 
 # Blog Web Application
 
