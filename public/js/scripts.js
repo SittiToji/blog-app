@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const postForm = document.getElementById('postForm');
     const postList = document.getElementById('postList');
 

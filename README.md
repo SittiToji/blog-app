@@ -26,7 +26,6 @@ blog-app
 │   ├── routes
 │   │   └── posts.js
 │   └── views
-│       ├── layout.ejs
 │       ├── index.ejs
 │       ├── new.ejs
 │       ├── edit.ejs
@@ -52,13 +51,25 @@ blog-app
    npm install
    ```
 
-## Usage
+## Development
 
-1. Start the application:
-   ```
-   npm start
-   ```
-2. Open your browser and go to `http://localhost:3000` to view the application.
+- Start the app in dev mode:
+  ```
+  npm run dev
+  ```
+
+## Production
+
+- Build minified assets:
+  ```
+  npm run build
+  ```
+- Start the server (ensure `NODE_ENV=production` for optimal caching/compression):
+  ```
+  NODE_ENV=production npm start
+  ```
+
+In production, templates automatically load `/css/styles.min.css` and `/js/scripts.min.js`, and the server sends gzip-compressed responses with cache headers for static assets.
 
 ## Contributing
 
