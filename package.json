@@ -5,14 +5,18 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "build": "npm run build:assets",
+    "build:assets": "esbuild public/js/scripts.js --minify --outfile=public/js/scripts.min.js && esbuild public/css/styles.css --minify --outfile=public/css/styles.min.css"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "ejs": "^3.1.6"
+    "ejs": "^3.1.6",
+    "compression": "^1.7.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "esbuild": "^0.21.5"
   },
   "keywords": [
     "blog",

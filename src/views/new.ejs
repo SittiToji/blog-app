@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Post</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="<%= env === 'production' ? ('/css/styles.min.css?v=' + assetVersion) : '/css/styles.css' %>">
 </head>
 <body>
     <%- include('partials/header') %>
@@ -23,5 +23,6 @@
         </form>
     </div>
     <%- include('partials/footer') %>
+    <script src="<%= env === 'production' ? '/js/scripts.min.js?v=' + assetVersion : '/js/scripts.js' %>" defer></script>
 </body>
 </html>
